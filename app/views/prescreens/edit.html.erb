@@ -1,0 +1,13 @@
+<h1>Edit Pre-Screen</h1>
+
+<%= form_for :prescreen, url: prescreen_path, method: :put do |f| %>  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', prescreens_path %>

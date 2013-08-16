@@ -8,9 +8,12 @@
  
   <% @prescreens.each do |prescreen| %>
     <tr>
-	    <td><%= prescreen.id %></td>
-	    <td><%= prescreen.title %></td>
-    
+		<td><%= prescreen.id %></td>
+		<td><%= prescreen.title %></td>
+		<td><%= link_to 'Show', prescreen_path(prescreen) %></td>
+	    <td><%= link_to 'Edit', edit_prescreen_path(prescreen) %></td>
+	    <td><%= link_to 'Destroy', prescreen_path(prescreen),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>

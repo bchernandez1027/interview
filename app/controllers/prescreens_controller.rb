@@ -22,4 +22,24 @@ class PrescreensController < ApplicationController
 		@prescreen = Prescreen.find(params[:id])
 	end
 
+	def update
+		 @prescreen = Prescreen.find(params[:id])
+ 
+ 		if @prescreen.update_attributes(params[:prescreen])
+    		redirect_to @prescreen
+  		else
+    		render 'edit'
+  		end
+	end
+
+	def destroy
+	  @prescreen = Prescreen.find(params[:id])
+	  @prescreen.destroy
+	 
+	  redirect_to prescreens_path
+	end
+
+
+
+
 end
