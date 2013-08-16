@@ -1,0 +1,19 @@
+<h1>Pre-Screen Index</h1>
+
+<table>
+  <tr>
+  	<th>ID</th>
+    <th>Title</th>
+  </tr>
+ 
+  <% @prescreens.each do |prescreen| %>
+    <tr>
+	    <td><%= prescreen.id %></td>
+	    <td><%= prescreen.title %></td>
+    
+    </tr>
+  <% end %>
+</table>
+
+
+<%= link_to 'New Pre-screen', new_prescreen_path %>
